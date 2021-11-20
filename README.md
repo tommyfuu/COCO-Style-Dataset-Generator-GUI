@@ -6,11 +6,11 @@ This is a simple GUI-based Widget based on matplotlib in Python to facilitate qu
 
 ### REQUIREMENTS:
 
-`Python 3.5+` is required to run the Mask RCNN code. If only the GUI tool is used, `Python2.7` or `Python3.5+` can be used.
+`Python 3.5+` is required to use this tool, and I would recommend Python 3.6.x or 3.7.x due to its high popularity and stability! Python can be downloaded [here](https://www.python.org/downloads/) - hover over the button "Downloads" and select your operating system.
 
-###### NOTE: For python2.7, OpenCV needs to be installed from source and configured to be in the environment running the code.
-###### Before installing, please upgrade setuptools using: pip install --upgrade setuptools
-###### For Windows users, please install Visual Studio C++ 14 or higher if necessary using this link: http://go.microsoft.com/fwlink/?LinkId=691126&fixForIE=.exe. 
+###### Before installing, in your terminal (for Mac) or powershell (for Windows), please upgrade setuptools using: pip install --upgrade setuptools.
+
+###### For Windows users, please install Visual Studio C++ 14 or higher using this link: http://go.microsoft.com/fwlink/?LinkId=691126&fixForIE=.exe.
 
 ### RUN THE SEGMENTOR GUI:
 
@@ -27,6 +27,8 @@ Before running the code, install required pre-requisite python packages using pi
 If you wish to use Mask RCNN to prelabel based on a trained model, please use the environment variable `MASK_RCNN="y"`, otherwise there's no need to include it and you could just perform the install.
 
 ###### Without Mask RCNN
+
+###### The Mask RCNN model method has some problem, so for the time-being, please stick to the Without-Mask-RCNN method!
 
 ```
 cd COCO-Style-Dataset-Generator-GUI/
@@ -50,7 +52,7 @@ python3 -m coco_dataset_generator.gui.segment -i background/ -c classes/products
 python3 -m coco_dataset_generator.gui.segment_bbox_only -i background/ -c classes/products.txt
 ```
 
-#### Running the instance segmentation GUI augmented by initial Mask RCNN pretrained model predictions:
+#### Running the instance segmentation GUI augmented by initial Mask RCNN pretrained model predictions (IGNORE THIS SECTION!):
 
 To run the particular model for the demo, download the pretrained weights from [HERE!!!](https://drive.google.com/file/d/1GaKVP3BvTfMwPbhEm4nF7fLATV-eDkFQ/view?usp=sharing). Download and extract pretrained weights into the repository.
 
@@ -82,7 +84,7 @@ HINT: Use `get_json_config.py` inside `Mask RCNN` to get config file wrt specifi
 |                 | --save_csv                  | Choose option to save dataset as CSV file                                          |
 | -x CONFIG_FILE  | --config_file CONFIG_FILE   | Path of JSON file for training config; Use `get_json_config` script from Mask RCNN |
 
-### POLYGON SEGMENTATION GUI CONTROLS:
+### (PLEASE PAY ATTENTION TO THIS SECTION!) POLYGON SEGMENTATION GUI CONTROLS:
 
 ![deepmagic](https://github.com/Deep-Magic/COCO-Style-Dataset-Generator-GUI/blob/master/gui.png)
 
@@ -161,7 +163,7 @@ USAGE: create_json_file.py [-h] -i IMAGE_DIR -o FILE_PATH -c CLASS_FILE -t TYPE
 | -c CLASS_FILE | --class_file CLASS_FILE | Path of file with output classes        |
 | -t TYPE       | --type TYPE             | Type of the image files (jpg, png etc.) |
 
-### RECTANGULAR BOUNDING BOX GUI CONTROLS:
+### (PLEASE PAY ATTENTION TO THIS SECTION!) RECTANGULAR BOUNDING BOX GUI CONTROLS:
 
 The same GUI is designed slightly differently in case of rectangular bounding box annotations with speed of annotation in mind. Thus, most keys are keyboard bindings. Most ideally, this interface is very suited to serve to track objects across video by dragging around a box of similar size. Since the save button saves multiple frame results together, the JSON file is directly created instead of txt files for each image, which means there wouldn't be a need to use `create_json_file.py`.
 
@@ -196,6 +198,8 @@ REGULAR MODE
                     rectangles in current image
 
       SAVE          Save all annotated objects so far
+
+      NEXT          Go to the next image and continue annotating bounding boxes
 
 ### LIST OF FUNCTIONALITIES:
 
