@@ -17,14 +17,14 @@ This is a simple GUI-based Widget based on matplotlib in Python to facilitate qu
 Clone the repo.
 
 ```
-git clone https://github.com/hanskrupakar/COCO-Style-Dataset-Generator-GUI.git
+git clone https://github.com/tommyfuu/COCO-Style-Dataset-Generator-GUI.git
 ```
 
 #### Installing Dependencies:
 
 Before running the code, install required pre-requisite python packages using pip.
 
-If you wish to use Mask RCNN to prelabel based on a trained model, please use the environment variable `MASK_RCNN="y"`, otherwise there's no need to include it and you could just perform the install.
+(IGNORE THIS SECTION: If you wish to use Mask RCNN to prelabel based on a trained model, please use the environment variable `MASK_RCNN="y"`, otherwise there's no need to include it and you could just perform the install.)
 
 ###### Without Mask RCNN
 
@@ -35,7 +35,7 @@ cd COCO-Style-Dataset-Generator-GUI/
 python setup.py install
 ```
 
-###### With Mask RCNN
+###### (IGNORE THIS SECTION!) With Mask RCNN
 
 ```
 cd COCO-Style-Dataset-Generator-GUI/
@@ -52,7 +52,7 @@ python3 -m coco_dataset_generator.gui.segment -i background/ -c classes/products
 python3 -m coco_dataset_generator.gui.segment_bbox_only -i background/ -c classes/products.txt
 ```
 
-#### Running the instance segmentation GUI augmented by initial Mask RCNN pretrained model predictions (IGNORE THIS SECTION!):
+#### (IGNORE THIS SECTION!) Running the instance segmentation GUI augmented by initial Mask RCNN pretrained model predictions:
 
 To run the particular model for the demo, download the pretrained weights from [HERE!!!](https://drive.google.com/file/d/1GaKVP3BvTfMwPbhEm4nF7fLATV-eDkFQ/view?usp=sharing). Download and extract pretrained weights into the repository.
 
