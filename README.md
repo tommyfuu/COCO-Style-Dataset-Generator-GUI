@@ -52,6 +52,8 @@ python3 -m coco_dataset_generator.gui.segment -i background/ -c classes/products
 python3 -m coco_dataset_generator.gui.segment_bbox_only -i background/ -c classes/products.txt
 ```
 
+The instructions on how to label and save annotated data are in the sections “Polygon Segmentation GUI Controls” or “Rectangular Bounding Box GUI Controls”. Please MAKE SURE TO LOOK AT THEM before you start labelling!
+
 #### (IGNORE THIS SECTION!) Running the instance segmentation GUI augmented by initial Mask RCNN pretrained model predictions:
 
 To run the particular model for the demo, download the pretrained weights from [HERE!!!](https://drive.google.com/file/d/1GaKVP3BvTfMwPbhEm4nF7fLATV-eDkFQ/view?usp=sharing). Download and extract pretrained weights into the repository.
