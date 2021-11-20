@@ -8,9 +8,9 @@ This is a simple GUI-based Widget based on matplotlib in Python to facilitate qu
 
 `Python 3.5+` is required to use this tool, and I would recommend Python 3.6.x or 3.7.x due to its high popularity and stability! Python can be downloaded [here](https://www.python.org/downloads/) - hover over the button "Downloads" and select your operating system.
 
-###### Before installing, in your terminal (for Mac) or powershell (for Windows), please upgrade setuptools using: pip install --upgrade setuptools.
+###### Please install Visual Studio C++ 14 or higher using this link: https://code.visualstudio.com/Download
 
-###### For Windows users, please install Visual Studio C++ 14 or higher using this link: http://go.microsoft.com/fwlink/?LinkId=691126&fixForIE=.exe.
+###### Before installing anything below this section, in your terminal (for Mac) or powershell (for Windows), both of which will be openable in Visual Studio Code, please upgrade setuptools using: pip install --upgrade setuptools.
 
 ### RUN THE SEGMENTOR GUI:
 
